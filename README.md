@@ -1,4 +1,4 @@
-> **Moved (2026-10-05):** the tool now lives in [`CassSuczeck/Tools`](https://github.com/CassSuczeck/Tools) at `fix-or-trade/index.html` and is served at https://tools.besafetravels.com/fix-or-trade/. Edit it there. This repo keeps the Apps Script lead receiver (`apps-script/`) and older notes; `index.html` here only forwards to the new address. `embed.html`, `squarespace-snippet.html` and `squarespace-custom-css.css` are no longer used (Squarespace /fix-or-trade is now a button page).
+> **Moved (2026-10-05):** the tool now lives in [`NomdeFeather/Tools`](https://github.com/NomdeFeather/Tools) at `fix-or-trade/index.html` and is served at https://tools.besafetravels.com/fix-or-trade/. Edit it there. This repo keeps the Apps Script lead receiver (`apps-script/`) and older notes; `index.html` here only forwards to the new address. `embed.html`, `squarespace-snippet.html` and `squarespace-custom-css.css` are no longer used (Squarespace /fix-or-trade is now a button page).
 
 # Fix it, or trade it in? — Safe Travels Mobile Repair
 
@@ -6,7 +6,7 @@ A free, 5-step web tool that helps a car owner decide whether to repair their cu
 
 **Status (Sep 28, 2026):** **live** at **besafetravels.com/fix-or-trade**, not linked from the menu, no password. Leads go to the Google Sheet via Apps Script (switched Sep 28). See [Status & next steps](#status--next-steps).
 
-**Project management:** this tool and the `/calculator` are handled from **one** Claude Code chat, which works in both repos. The shared status file is `PROJECT-STATUS.md` → "Goal 2" in the private `CassSuczeck/website` repo. **This repo is public and GitHub Pages serves `main`, so any push to `main` changes the live tool.** Don't commit secrets here.
+**Project management:** this tool and the `/calculator` are handled from **one** Claude Code chat, which works in both repos. The shared status file is `PROJECT-STATUS.md` → "Goal 2" in the private `NomdeFeather/website` repo. **This repo is public and GitHub Pages serves `main`, so any push to `main` changes the live tool.** Don't commit secrets here.
 
 | File | What it is |
 |---|---|
@@ -164,11 +164,11 @@ The disclaimer promises that answers are used "only to reply to your request". K
 
 1. This repo must be **public** for free GitHub Pages.
 2. On GitHub, go to **Settings → Pages**. Under *Build and deployment*, choose **Deploy from a branch**, then branch **main**, folder **/ (root)**, and save.
-3. After about a minute, the tool is live at **https://casssuczeck.github.io/fix-or-trade/**.
+3. After about a minute, the tool is live at **https://nomdefeather.github.io/fix-or-trade/**.
 4. Every change pushed to `main` goes live automatically.
 
 ### Optional: your own address (e.g. `tools.besafetravels.com`)
-1. In Squarespace, go to **Settings → Domains & Email → besafetravels.com → DNS**. Add a **CNAME** record with host `tools`, pointing to `casssuczeck.github.io`.
+1. In Squarespace, go to **Settings → Domains & Email → besafetravels.com → DNS**. Add a **CNAME** record with host `tools`, pointing to `nomdefeather.github.io`.
 2. On GitHub, go to **Settings → Pages → Custom domain**, enter `tools.besafetravels.com`, save, and tick **Enforce HTTPS** once it's available.
 3. In `embed.html`, change the iframe `src` to `https://tools.besafetravels.com/` and `TOOL_ORIGIN` to `https://tools.besafetravels.com`.
 

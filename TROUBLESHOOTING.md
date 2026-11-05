@@ -5,22 +5,22 @@ A guide to getting `embed.html` working on the Squarespace page. You can also pa
 ## Setup
 | Piece | Where |
 |---|---|
-| Tool source | Public repo `CassSuczeck/fix-or-trade`, branch `main` |
-| Hosted tool | GitHub Pages: https://casssuczeck.github.io/fix-or-trade/ |
+| Tool source | Public repo `NomdeFeather/fix-or-trade`, branch `main` |
+| Hosted tool | GitHub Pages: https://nomdefeather.github.io/fix-or-trade/ |
 | Squarespace page | `besafetravels.com/fix-or-trade`, **live, not linked** (Sep 28) |
 | Embed code | `embed.html`, pasted into a block on that page |
 | Backup | `squarespace-snippet.html`: the whole tool in one paste, no hosting needed. It must be re-pasted after every change. |
 
 ## How `embed.html` works
 - It adds `<div id="st-fix-or-trade">` containing an iframe that loads the hosted tool. The iframe starts at 1150px tall.
-- It adds a script that listens for `postMessage`, accepting messages only from the origin `https://casssuczeck.github.io`:
+- It adds a script that listens for `postMessage`, accepting messages only from the origin `https://nomdefeather.github.io`:
   - `{type:'st-fix-or-trade-height', height:N}` sets the iframe height to N px. The tool sends this whenever its content height changes (ResizeObserver).
   - `{type:'st-fix-or-trade-scroll'}` scrolls the host page up to the top of the tool if it's above the screen. The tool sends this on every step change.
 
 **Expected:** there's no scrollbar inside the frame, and the frame grows and shrinks with each step. On a phone it's about 950px tall on step 1 and about 3,400px on the results page. The tool's styles never affect the Squarespace page.
 
 ## Checklist, in order
-1. **The hosted tool loads on its own.** Open https://casssuczeck.github.io/fix-or-trade/ in a private window. If it's a 404:
+1. **The hosted tool loads on its own.** Open https://nomdefeather.github.io/fix-or-trade/ in a private window. If it's a 404:
    - Wait about 10 minutes after the first deploy.
    - Try `/fix-or-trade/index.html`.
    - Check **Settings → Pages**. It should say "Your site is live at …", with branch `main` and folder `/ (root)`, not `/docs`.
